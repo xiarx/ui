@@ -23,11 +23,7 @@ const config = {
       template: "index.html",
       favicon: path.join(__dirname, "src/assets/images/favicon.ico"),
     }),
-    new webpack.DefinePlugin({
-      "process.env.AUTH_TOKEN": JSON.stringify(process.env.AUTH_TOKEN),
-      "process.env.SWAPI_URI": JSON.stringify(process.env.SWAPI_URI),
-      "process.env.UNSPLASH_URI": JSON.stringify(process.env.UNSPLASH_URI),
-    }),
+    new webpack.DefinePlugin({}),
   ],
   target: "web",
   module: {
