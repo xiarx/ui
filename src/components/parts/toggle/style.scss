@@ -10,12 +10,13 @@
   .toggle-left,
   .toggle-right {
     position: relative;
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     cursor: pointer;
+    transition: border 0.2s linear;
 
     &:hover {
-      border: 5px solid #ffffff;
+      border: 6px solid #ffffff;
 
       > .toggle-line {
         border: 1px solid #ffffff;
@@ -24,40 +25,41 @@
   }
 
   .toggle-left {
-    border: 5px solid #ffffff;
+    border: 6px solid #ffffff;
   }
 
   .toggle-right {
-    border: 5px solid #e0d0f0;
+    border: 6px solid #2070b0;
   }
 
   .toggle-line {
-    border: 1px solid #e0d0f0;
+    border: 1px solid #2070b0;
     position: absolute;
+    transition: border 0.2s linear;
 
     &.horizontal {
-      width: 18px;
+      width: 20px;
       height: 0;
 
       &.one {
-        margin-top: 30%;
+        margin-top: 28%;
       }
 
       &.two {
-        margin-top: 60%;
+        margin-top: 62%;
       }
     }
 
     &.vertical {
       width: 0;
-      height: 18px;
+      height: 20px;
 
       &.one {
-        margin-left: 30%;
+        margin-left: 28%;
       }
 
       &.two {
-        margin-left: 60%;
+        margin-left: 62%;
       }
     }
   }
@@ -65,7 +67,7 @@
   .toggle-slider {
     display: flex;
     align-items: center;
-    width: 120px;
+    width: 100px;
     height: 44px;
     border: 8px solid white;
     border-radius: 40px;
@@ -83,15 +85,15 @@
 
   &.active {
     .toggle-left {
-      border: 5px solid #e0d0f0;
+      border: 6px solid #2070b0;
 
       &:hover {
-        border: 5px solid #ffffff;
+        border: 6px solid #ffffff;
       }
     }
 
     .toggle-right {
-      border: 5px solid #ffffff;
+      border: 6px solid #ffffff;
 
       > .toggle-line {
         border: 1px solid #ffffff;
@@ -99,7 +101,7 @@
     }
 
     .toggle-slider-icon {
-      margin-left: 74px;
+      margin-left: 54px;
     }
   }
 }

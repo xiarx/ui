@@ -4,8 +4,12 @@ import type { FC } from "react";
 
 import "./style";
 
-const Toggle: FC = (): JSX.Element => {
-  const [active, setActive] = useState<boolean>(false)
+interface Props {
+  active?: boolean
+}
+
+const Toggle: FC<Props> = (props): JSX.Element => {
+  const [active, setActive] = useState<boolean>(!!props.active)
 
   return (
     <div className={`toggle${active ? ' active' : ''}`}>
